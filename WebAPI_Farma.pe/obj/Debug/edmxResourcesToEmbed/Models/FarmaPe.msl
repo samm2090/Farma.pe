@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BD_FARMACIAModelStoreContainer" CdmEntityContainer="BD_FARMACIAEntities">
+    <EntitySetMapping Name="ADVERTENCIA">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.ADVERTENCIA">
+        <MappingFragment StoreEntitySet="ADVERTENCIA">
+          <ScalarProperty Name="ID_ADV" ColumnName="ID_ADV" />
+          <ScalarProperty Name="DES_ADV" ColumnName="DES_ADV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPARTAMENTO">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.DEPARTAMENTO">
+        <MappingFragment StoreEntitySet="DEPARTAMENTO">
+          <ScalarProperty Name="ID_DEP" ColumnName="ID_DEP" />
+          <ScalarProperty Name="DES_DEP" ColumnName="DES_DEP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DISTRITO">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.DISTRITO">
+        <MappingFragment StoreEntitySet="DISTRITO">
+          <ScalarProperty Name="ID_DIS" ColumnName="ID_DIS" />
+          <ScalarProperty Name="DES_DIS" ColumnName="DES_DIS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FARMACIA">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.FARMACIA">
+        <MappingFragment StoreEntitySet="FARMACIA">
+          <ScalarProperty Name="ID_FAR" ColumnName="ID_FAR" />
+          <ScalarProperty Name="NOM_FAR" ColumnName="NOM_FAR" />
+          <ScalarProperty Name="DIR_FAR" ColumnName="DIR_FAR" />
+          <ScalarProperty Name="CORX_FAR" ColumnName="CORX_FAR" />
+          <ScalarProperty Name="CORDY_FAR" ColumnName="CORDY_FAR" />
+          <ScalarProperty Name="HORARIO_FAR" ColumnName="HORARIO_FAR" />
+          <ScalarProperty Name="GEO_LUGAR" ColumnName="GEO_LUGAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FAVORITO">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.FAVORITO">
+        <MappingFragment StoreEntitySet="FAVORITO">
+          <ScalarProperty Name="ID_FAV" ColumnName="ID_FAV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORMA_USO">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.FORMA_USO">
+        <MappingFragment StoreEntitySet="FORMA_USO">
+          <ScalarProperty Name="ID_FOR" ColumnName="ID_FOR" />
+          <ScalarProperty Name="DES_FOR" ColumnName="DES_FOR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LABORATORIO">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.LABORATORIO">
+        <MappingFragment StoreEntitySet="LABORATORIO">
+          <ScalarProperty Name="ID_LAB" ColumnName="ID_LAB" />
+          <ScalarProperty Name="NOM_LAB" ColumnName="NOM_LAB" />
+          <ScalarProperty Name="RSO_LAB" ColumnName="RSO_LAB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LABORATORIO_MEDICAMENTO">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.LABORATORIO_MEDICAMENTO">
+        <MappingFragment StoreEntitySet="LABORATORIO_MEDICAMENTO">
+          <ScalarProperty Name="ID_LABMED" ColumnName="ID_LABMED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEDICAMENTO">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.MEDICAMENTO">
+        <MappingFragment StoreEntitySet="MEDICAMENTO">
+          <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+          <ScalarProperty Name="NOM_MED" ColumnName="NOM_MED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEDICAMENTO_FARMACIA">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.MEDICAMENTO_FARMACIA">
+        <MappingFragment StoreEntitySet="MEDICAMENTO_FARMACIA">
+          <ScalarProperty Name="ID_MEDFAR" ColumnName="ID_MEDFAR" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MEDICAMENTO_SINTOMA">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.MEDICAMENTO_SINTOMA">
+        <MappingFragment StoreEntitySet="MEDICAMENTO_SINTOMA">
+          <ScalarProperty Name="ID_MEDSIN" ColumnName="ID_MEDSIN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERSONA">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.PERSONA">
+        <MappingFragment StoreEntitySet="PERSONA">
+          <ScalarProperty Name="PER_ID" ColumnName="PER_ID" />
+          <ScalarProperty Name="NOM_PER" ColumnName="NOM_PER" />
+          <ScalarProperty Name="APEP_PER" ColumnName="APEP_PER" />
+          <ScalarProperty Name="APEM_PER" ColumnName="APEM_PER" />
+          <ScalarProperty Name="FNAC_PER" ColumnName="FNAC_PER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROMOCION">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.PROMOCION">
+        <MappingFragment StoreEntitySet="PROMOCION">
+          <ScalarProperty Name="ID_PRO" ColumnName="ID_PRO" />
+          <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+          <ScalarProperty Name="ID_FAR" ColumnName="ID_FAR" />
+          <ScalarProperty Name="DES_PRO" ColumnName="DES_PRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVINCIA">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.PROVINCIA">
+        <MappingFragment StoreEntitySet="PROVINCIA">
+          <ScalarProperty Name="ID_PRO" ColumnName="ID_PRO" />
+          <ScalarProperty Name="DES_PRO" ColumnName="DES_PRO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SINTOMA">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.SINTOMA">
+        <MappingFragment StoreEntitySet="SINTOMA">
+          <ScalarProperty Name="ID_SIN" ColumnName="ID_SIN" />
+          <ScalarProperty Name="DES_SIN" ColumnName="DES_SIN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="BD_FARMACIAModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="ID_USU" ColumnName="ID_USU" />
+          <ScalarProperty Name="NOM_USU" ColumnName="NOM_USU" />
+          <ScalarProperty Name="PASS_USU" ColumnName="PASS_USU" />
+          <ScalarProperty Name="CORREO_USU" ColumnName="CORREO_USU" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MEDICAMENTO_ADVERTENCIA" TypeName="BD_FARMACIAModel.MEDICAMENTO_ADVERTENCIA" StoreEntitySet="MEDICAMENTO">
+      <EndProperty Name="ADVERTENCIA">
+        <ScalarProperty Name="ID_ADV" ColumnName="ID_ADV" />
+      </EndProperty>
+      <EndProperty Name="MEDICAMENTO">
+        <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PROVINCIA_DEPARTAMENTO" TypeName="BD_FARMACIAModel.PROVINCIA_DEPARTAMENTO" StoreEntitySet="PROVINCIA">
+      <EndProperty Name="DEPARTAMENTO">
+        <ScalarProperty Name="ID_DEP" ColumnName="ID_DEP" />
+      </EndProperty>
+      <EndProperty Name="PROVINCIA">
+        <ScalarProperty Name="ID_PRO" ColumnName="ID_PRO" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DISTRITO_PROVINCIA" TypeName="BD_FARMACIAModel.DISTRITO_PROVINCIA" StoreEntitySet="DISTRITO">
+      <EndProperty Name="PROVINCIA">
+        <ScalarProperty Name="ID_PRO" ColumnName="ID_PRO" />
+      </EndProperty>
+      <EndProperty Name="DISTRITO">
+        <ScalarProperty Name="ID_DIS" ColumnName="ID_DIS" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FARMACIA_DISTRITO" TypeName="BD_FARMACIAModel.FARMACIA_DISTRITO" StoreEntitySet="FARMACIA">
+      <EndProperty Name="DISTRITO">
+        <ScalarProperty Name="ID_DIS" ColumnName="ID_DIS" />
+      </EndProperty>
+      <EndProperty Name="FARMACIA">
+        <ScalarProperty Name="ID_FAR" ColumnName="ID_FAR" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MEDICAMENTO_FARMACIA_FARMACIA" TypeName="BD_FARMACIAModel.MEDICAMENTO_FARMACIA_FARMACIA" StoreEntitySet="MEDICAMENTO_FARMACIA">
+      <EndProperty Name="FARMACIA">
+        <ScalarProperty Name="ID_FAR" ColumnName="ID_FAR" />
+      </EndProperty>
+      <EndProperty Name="MEDICAMENTO_FARMACIA">
+        <ScalarProperty Name="ID_MEDFAR" ColumnName="ID_MEDFAR" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FAVORITO_MEDICAMENTO" TypeName="BD_FARMACIAModel.FAVORITO_MEDICAMENTO" StoreEntitySet="FAVORITO">
+      <EndProperty Name="MEDICAMENTO">
+        <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+      </EndProperty>
+      <EndProperty Name="FAVORITO">
+        <ScalarProperty Name="ID_FAV" ColumnName="ID_FAV" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FAVORITO_USUARIO" TypeName="BD_FARMACIAModel.FAVORITO_USUARIO" StoreEntitySet="FAVORITO">
+      <EndProperty Name="USUARIO">
+        <ScalarProperty Name="ID_USU" ColumnName="ID_USU" />
+      </EndProperty>
+      <EndProperty Name="FAVORITO">
+        <ScalarProperty Name="ID_FAV" ColumnName="ID_FAV" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MEDICAMENTO_FORMA_USO" TypeName="BD_FARMACIAModel.MEDICAMENTO_FORMA_USO" StoreEntitySet="MEDICAMENTO">
+      <EndProperty Name="FORMA_USO">
+        <ScalarProperty Name="ID_FOR" ColumnName="ID_FOR" />
+      </EndProperty>
+      <EndProperty Name="MEDICAMENTO">
+        <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LABORATORIO_MEDICAMENTO_LABORATORIO" TypeName="BD_FARMACIAModel.LABORATORIO_MEDICAMENTO_LABORATORIO" StoreEntitySet="LABORATORIO_MEDICAMENTO">
+      <EndProperty Name="LABORATORIO">
+        <ScalarProperty Name="ID_LAB" ColumnName="ID_LAB" />
+      </EndProperty>
+      <EndProperty Name="LABORATORIO_MEDICAMENTO">
+        <ScalarProperty Name="ID_LABMED" ColumnName="ID_LABMED" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LABORATORIO_MEDICAMENTO_MEDICAMENTO" TypeName="BD_FARMACIAModel.LABORATORIO_MEDICAMENTO_MEDICAMENTO" StoreEntitySet="LABORATORIO_MEDICAMENTO">
+      <EndProperty Name="MEDICAMENTO">
+        <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+      </EndProperty>
+      <EndProperty Name="LABORATORIO_MEDICAMENTO">
+        <ScalarProperty Name="ID_LABMED" ColumnName="ID_LABMED" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MEDICAMENTO_FARMACIA_MEDICAMENTO" TypeName="BD_FARMACIAModel.MEDICAMENTO_FARMACIA_MEDICAMENTO" StoreEntitySet="MEDICAMENTO_FARMACIA">
+      <EndProperty Name="MEDICAMENTO">
+        <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+      </EndProperty>
+      <EndProperty Name="MEDICAMENTO_FARMACIA">
+        <ScalarProperty Name="ID_MEDFAR" ColumnName="ID_MEDFAR" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MEDICAMENTO_SINTOMA_MEDICAMENTO" TypeName="BD_FARMACIAModel.MEDICAMENTO_SINTOMA_MEDICAMENTO" StoreEntitySet="MEDICAMENTO_SINTOMA">
+      <EndProperty Name="MEDICAMENTO">
+        <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+      </EndProperty>
+      <EndProperty Name="MEDICAMENTO_SINTOMA">
+        <ScalarProperty Name="ID_MEDSIN" ColumnName="ID_MEDSIN" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MEDICAMENTO_SINTOMA_SINTOMA" TypeName="BD_FARMACIAModel.MEDICAMENTO_SINTOMA_SINTOMA" StoreEntitySet="MEDICAMENTO_SINTOMA">
+      <EndProperty Name="SINTOMA">
+        <ScalarProperty Name="ID_SIN" ColumnName="ID_SIN" />
+      </EndProperty>
+      <EndProperty Name="MEDICAMENTO_SINTOMA">
+        <ScalarProperty Name="ID_MEDSIN" ColumnName="ID_MEDSIN" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PERSONA_USUARIO" TypeName="BD_FARMACIAModel.PERSONA_USUARIO" StoreEntitySet="PERSONA">
+      <EndProperty Name="USUARIO">
+        <ScalarProperty Name="ID_USU" ColumnName="ID_USU" />
+      </EndProperty>
+      <EndProperty Name="PERSONA">
+        <ScalarProperty Name="PER_ID" ColumnName="PER_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

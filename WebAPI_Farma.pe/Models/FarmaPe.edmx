@@ -1,0 +1,1022 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BD_FARMACIAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ADVERTENCIA">
+          <Key>
+            <PropertyRef Name="ID_ADV" />
+          </Key>
+          <Property Name="ID_ADV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DES_ADV" Type="nvarchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DEPARTAMENTO">
+          <Key>
+            <PropertyRef Name="ID_DEP" />
+          </Key>
+          <Property Name="ID_DEP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DES_DEP" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DISTRITO">
+          <Key>
+            <PropertyRef Name="ID_DIS" />
+          </Key>
+          <Property Name="ID_DIS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_PRO" Type="int" Nullable="false" />
+          <Property Name="DES_DIS" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FARMACIA">
+          <Key>
+            <PropertyRef Name="ID_FAR" />
+          </Key>
+          <Property Name="ID_FAR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_DIS" Type="int" Nullable="false" />
+          <Property Name="NOM_FAR" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="DIR_FAR" Type="nvarchar" MaxLength="300" />
+          <Property Name="CORX_FAR" Type="real" />
+          <Property Name="CORDY_FAR" Type="real" />
+          <Property Name="HORARIO_FAR" Type="int" />
+          <Property Name="GEO_LUGAR" Type="geography" />
+        </EntityType>
+        <EntityType Name="FAVORITO">
+          <Key>
+            <PropertyRef Name="ID_FAV" />
+          </Key>
+          <Property Name="ID_FAV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_MED" Type="int" Nullable="false" />
+          <Property Name="ID_USU" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FORMA_USO">
+          <Key>
+            <PropertyRef Name="ID_FOR" />
+          </Key>
+          <Property Name="ID_FOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DES_FOR" Type="nvarchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LABORATORIO">
+          <Key>
+            <PropertyRef Name="ID_LAB" />
+          </Key>
+          <Property Name="ID_LAB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOM_LAB" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="RSO_LAB" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="LABORATORIO_MEDICAMENTO">
+          <Key>
+            <PropertyRef Name="ID_LABMED" />
+          </Key>
+          <Property Name="ID_LABMED" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_LAB" Type="int" Nullable="false" />
+          <Property Name="ID_MED" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MEDICAMENTO">
+          <Key>
+            <PropertyRef Name="ID_MED" />
+          </Key>
+          <Property Name="ID_MED" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_ADV" Type="int" Nullable="false" />
+          <Property Name="ID_FOR" Type="int" Nullable="false" />
+          <Property Name="NOM_MED" Type="nvarchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MEDICAMENTO_FARMACIA">
+          <Key>
+            <PropertyRef Name="ID_MEDFAR" />
+          </Key>
+          <Property Name="ID_MEDFAR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_MED" Type="int" Nullable="false" />
+          <Property Name="ID_FAR" Type="int" Nullable="false" />
+          <Property Name="PRECIO" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MEDICAMENTO_SINTOMA">
+          <Key>
+            <PropertyRef Name="ID_MEDSIN" />
+          </Key>
+          <Property Name="ID_MEDSIN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_SIN" Type="int" Nullable="false" />
+          <Property Name="ID_MED" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PERSONA">
+          <Key>
+            <PropertyRef Name="PER_ID" />
+          </Key>
+          <Property Name="PER_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_USU" Type="int" Nullable="false" />
+          <Property Name="NOM_PER" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="APEP_PER" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="APEM_PER" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="FNAC_PER" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PROMOCION">
+          <Key>
+            <PropertyRef Name="ID_PRO" />
+            <PropertyRef Name="ID_MED" />
+            <PropertyRef Name="ID_FAR" />
+          </Key>
+          <Property Name="ID_PRO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_MED" Type="int" Nullable="false" />
+          <Property Name="ID_FAR" Type="int" Nullable="false" />
+          <Property Name="DES_PRO" Type="nvarchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PROVINCIA">
+          <Key>
+            <PropertyRef Name="ID_PRO" />
+          </Key>
+          <Property Name="ID_PRO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_DEP" Type="int" Nullable="false" />
+          <Property Name="DES_PRO" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SINTOMA">
+          <Key>
+            <PropertyRef Name="ID_SIN" />
+          </Key>
+          <Property Name="ID_SIN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DES_SIN" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USU" />
+          </Key>
+          <Property Name="ID_USU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOM_USU" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="PASS_USU" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="CORREO_USU" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <Association Name="DISTRITO_PROVINCIA">
+          <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="1" />
+          <End Role="DISTRITO" Type="Self.DISTRITO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PROVINCIA">
+              <PropertyRef Name="ID_PRO" />
+            </Principal>
+            <Dependent Role="DISTRITO">
+              <PropertyRef Name="ID_PRO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FARMACIA_DISTRITO">
+          <End Role="DISTRITO" Type="Self.DISTRITO" Multiplicity="1" />
+          <End Role="FARMACIA" Type="Self.FARMACIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DISTRITO">
+              <PropertyRef Name="ID_DIS" />
+            </Principal>
+            <Dependent Role="FARMACIA">
+              <PropertyRef Name="ID_DIS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FAVORITO_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="FAVORITO" Type="Self.FAVORITO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDICAMENTO">
+              <PropertyRef Name="ID_MED" />
+            </Principal>
+            <Dependent Role="FAVORITO">
+              <PropertyRef Name="ID_MED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FAVORITO_USUARIO">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="FAVORITO" Type="Self.FAVORITO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USU" />
+            </Principal>
+            <Dependent Role="FAVORITO">
+              <PropertyRef Name="ID_USU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LABORATORIO_MEDICAMENTO_LABORATORIO">
+          <End Role="LABORATORIO" Type="Self.LABORATORIO" Multiplicity="1" />
+          <End Role="LABORATORIO_MEDICAMENTO" Type="Self.LABORATORIO_MEDICAMENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LABORATORIO">
+              <PropertyRef Name="ID_LAB" />
+            </Principal>
+            <Dependent Role="LABORATORIO_MEDICAMENTO">
+              <PropertyRef Name="ID_LAB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="LABORATORIO_MEDICAMENTO_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="LABORATORIO_MEDICAMENTO" Type="Self.LABORATORIO_MEDICAMENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDICAMENTO">
+              <PropertyRef Name="ID_MED" />
+            </Principal>
+            <Dependent Role="LABORATORIO_MEDICAMENTO">
+              <PropertyRef Name="ID_MED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MEDICAMENTO_ADVERTENCIA">
+          <End Role="ADVERTENCIA" Type="Self.ADVERTENCIA" Multiplicity="1" />
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ADVERTENCIA">
+              <PropertyRef Name="ID_ADV" />
+            </Principal>
+            <Dependent Role="MEDICAMENTO">
+              <PropertyRef Name="ID_ADV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MEDICAMENTO_FARMACIA_FARMACIA">
+          <End Role="FARMACIA" Type="Self.FARMACIA" Multiplicity="1" />
+          <End Role="MEDICAMENTO_FARMACIA" Type="Self.MEDICAMENTO_FARMACIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FARMACIA">
+              <PropertyRef Name="ID_FAR" />
+            </Principal>
+            <Dependent Role="MEDICAMENTO_FARMACIA">
+              <PropertyRef Name="ID_FAR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MEDICAMENTO_FARMACIA_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="MEDICAMENTO_FARMACIA" Type="Self.MEDICAMENTO_FARMACIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDICAMENTO">
+              <PropertyRef Name="ID_MED" />
+            </Principal>
+            <Dependent Role="MEDICAMENTO_FARMACIA">
+              <PropertyRef Name="ID_MED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MEDICAMENTO_FORMA_USO">
+          <End Role="FORMA_USO" Type="Self.FORMA_USO" Multiplicity="1" />
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FORMA_USO">
+              <PropertyRef Name="ID_FOR" />
+            </Principal>
+            <Dependent Role="MEDICAMENTO">
+              <PropertyRef Name="ID_FOR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MEDICAMENTO_SINTOMA_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="MEDICAMENTO_SINTOMA" Type="Self.MEDICAMENTO_SINTOMA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDICAMENTO">
+              <PropertyRef Name="ID_MED" />
+            </Principal>
+            <Dependent Role="MEDICAMENTO_SINTOMA">
+              <PropertyRef Name="ID_MED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MEDICAMENTO_SINTOMA_SINTOMA">
+          <End Role="SINTOMA" Type="Self.SINTOMA" Multiplicity="1" />
+          <End Role="MEDICAMENTO_SINTOMA" Type="Self.MEDICAMENTO_SINTOMA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINTOMA">
+              <PropertyRef Name="ID_SIN" />
+            </Principal>
+            <Dependent Role="MEDICAMENTO_SINTOMA">
+              <PropertyRef Name="ID_SIN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PERSONA_USUARIO">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="ID_USU" />
+            </Principal>
+            <Dependent Role="PERSONA">
+              <PropertyRef Name="ID_USU" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PROMOCION_FARMACIA">
+          <End Role="FARMACIA" Type="Self.FARMACIA" Multiplicity="1" />
+          <End Role="PROMOCION" Type="Self.PROMOCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FARMACIA">
+              <PropertyRef Name="ID_FAR" />
+            </Principal>
+            <Dependent Role="PROMOCION">
+              <PropertyRef Name="ID_FAR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PROMOCION_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="PROMOCION" Type="Self.PROMOCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDICAMENTO">
+              <PropertyRef Name="ID_MED" />
+            </Principal>
+            <Dependent Role="PROMOCION">
+              <PropertyRef Name="ID_MED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PROVINCIA_DEPARTAMENTO">
+          <End Role="DEPARTAMENTO" Type="Self.DEPARTAMENTO" Multiplicity="1" />
+          <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTAMENTO">
+              <PropertyRef Name="ID_DEP" />
+            </Principal>
+            <Dependent Role="PROVINCIA">
+              <PropertyRef Name="ID_DEP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BD_FARMACIAModelStoreContainer">
+          <EntitySet Name="ADVERTENCIA" EntityType="Self.ADVERTENCIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DEPARTAMENTO" EntityType="Self.DEPARTAMENTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DISTRITO" EntityType="Self.DISTRITO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FARMACIA" EntityType="Self.FARMACIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FAVORITO" EntityType="Self.FAVORITO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FORMA_USO" EntityType="Self.FORMA_USO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LABORATORIO" EntityType="Self.LABORATORIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LABORATORIO_MEDICAMENTO" EntityType="Self.LABORATORIO_MEDICAMENTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MEDICAMENTO" EntityType="Self.MEDICAMENTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MEDICAMENTO_FARMACIA" EntityType="Self.MEDICAMENTO_FARMACIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MEDICAMENTO_SINTOMA" EntityType="Self.MEDICAMENTO_SINTOMA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERSONA" EntityType="Self.PERSONA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PROMOCION" EntityType="Self.PROMOCION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PROVINCIA" EntityType="Self.PROVINCIA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SINTOMA" EntityType="Self.SINTOMA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="DISTRITO_PROVINCIA" Association="Self.DISTRITO_PROVINCIA">
+            <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+            <End Role="DISTRITO" EntitySet="DISTRITO" />
+          </AssociationSet>
+          <AssociationSet Name="FARMACIA_DISTRITO" Association="Self.FARMACIA_DISTRITO">
+            <End Role="DISTRITO" EntitySet="DISTRITO" />
+            <End Role="FARMACIA" EntitySet="FARMACIA" />
+          </AssociationSet>
+          <AssociationSet Name="FAVORITO_MEDICAMENTO" Association="Self.FAVORITO_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="FAVORITO" EntitySet="FAVORITO" />
+          </AssociationSet>
+          <AssociationSet Name="FAVORITO_USUARIO" Association="Self.FAVORITO_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="FAVORITO" EntitySet="FAVORITO" />
+          </AssociationSet>
+          <AssociationSet Name="LABORATORIO_MEDICAMENTO_LABORATORIO" Association="Self.LABORATORIO_MEDICAMENTO_LABORATORIO">
+            <End Role="LABORATORIO" EntitySet="LABORATORIO" />
+            <End Role="LABORATORIO_MEDICAMENTO" EntitySet="LABORATORIO_MEDICAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="LABORATORIO_MEDICAMENTO_MEDICAMENTO" Association="Self.LABORATORIO_MEDICAMENTO_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="LABORATORIO_MEDICAMENTO" EntitySet="LABORATORIO_MEDICAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_ADVERTENCIA" Association="Self.MEDICAMENTO_ADVERTENCIA">
+            <End Role="ADVERTENCIA" EntitySet="ADVERTENCIA" />
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_FARMACIA_FARMACIA" Association="Self.MEDICAMENTO_FARMACIA_FARMACIA">
+            <End Role="FARMACIA" EntitySet="FARMACIA" />
+            <End Role="MEDICAMENTO_FARMACIA" EntitySet="MEDICAMENTO_FARMACIA" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_FARMACIA_MEDICAMENTO" Association="Self.MEDICAMENTO_FARMACIA_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="MEDICAMENTO_FARMACIA" EntitySet="MEDICAMENTO_FARMACIA" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_FORMA_USO" Association="Self.MEDICAMENTO_FORMA_USO">
+            <End Role="FORMA_USO" EntitySet="FORMA_USO" />
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_SINTOMA_MEDICAMENTO" Association="Self.MEDICAMENTO_SINTOMA_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="MEDICAMENTO_SINTOMA" EntitySet="MEDICAMENTO_SINTOMA" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_SINTOMA_SINTOMA" Association="Self.MEDICAMENTO_SINTOMA_SINTOMA">
+            <End Role="SINTOMA" EntitySet="SINTOMA" />
+            <End Role="MEDICAMENTO_SINTOMA" EntitySet="MEDICAMENTO_SINTOMA" />
+          </AssociationSet>
+          <AssociationSet Name="PERSONA_USUARIO" Association="Self.PERSONA_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="PERSONA" EntitySet="PERSONA" />
+          </AssociationSet>
+          <AssociationSet Name="PROMOCION_FARMACIA" Association="Self.PROMOCION_FARMACIA">
+            <End Role="FARMACIA" EntitySet="FARMACIA" />
+            <End Role="PROMOCION" EntitySet="PROMOCION" />
+          </AssociationSet>
+          <AssociationSet Name="PROMOCION_MEDICAMENTO" Association="Self.PROMOCION_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="PROMOCION" EntitySet="PROMOCION" />
+          </AssociationSet>
+          <AssociationSet Name="PROVINCIA_DEPARTAMENTO" Association="Self.PROVINCIA_DEPARTAMENTO">
+            <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+            <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BD_FARMACIAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ADVERTENCIA">
+          <Key>
+            <PropertyRef Name="ID_ADV" />
+          </Key>
+          <Property Name="ID_ADV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DES_ADV" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="MEDICAMENTO" Relationship="Self.MEDICAMENTO_ADVERTENCIA" FromRole="ADVERTENCIA" ToRole="MEDICAMENTO" />
+        </EntityType>
+        <EntityType Name="DEPARTAMENTO">
+          <Key>
+            <PropertyRef Name="ID_DEP" />
+          </Key>
+          <Property Name="ID_DEP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DES_DEP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PROVINCIA" Relationship="Self.PROVINCIA_DEPARTAMENTO" FromRole="DEPARTAMENTO" ToRole="PROVINCIA" />
+        </EntityType>
+        <EntityType Name="DISTRITO">
+          <Key>
+            <PropertyRef Name="ID_DIS" />
+          </Key>
+          <Property Name="ID_DIS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DES_DIS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PROVINCIA" Relationship="Self.DISTRITO_PROVINCIA" FromRole="DISTRITO" ToRole="PROVINCIA" />
+          <NavigationProperty Name="FARMACIA" Relationship="Self.FARMACIA_DISTRITO" FromRole="DISTRITO" ToRole="FARMACIA" />
+        </EntityType>
+        <EntityType Name="FARMACIA">
+          <Key>
+            <PropertyRef Name="ID_FAR" />
+          </Key>
+          <Property Name="ID_FAR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_FAR" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DIR_FAR" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CORX_FAR" Type="Single" />
+          <Property Name="CORDY_FAR" Type="Single" />
+          <Property Name="HORARIO_FAR" Type="Int32" />
+          <Property Name="GEO_LUGAR" Type="Geography" />
+          <NavigationProperty Name="DISTRITO" Relationship="Self.FARMACIA_DISTRITO" FromRole="FARMACIA" ToRole="DISTRITO" />
+          <NavigationProperty Name="MEDICAMENTO_FARMACIA" Relationship="Self.MEDICAMENTO_FARMACIA_FARMACIA" FromRole="FARMACIA" ToRole="MEDICAMENTO_FARMACIA" />
+          <NavigationProperty Name="PROMOCION" Relationship="Self.PROMOCION_FARMACIA" FromRole="FARMACIA" ToRole="PROMOCION" />
+        </EntityType>
+        <EntityType Name="FAVORITO">
+          <Key>
+            <PropertyRef Name="ID_FAV" />
+          </Key>
+          <Property Name="ID_FAV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="MEDICAMENTO" Relationship="Self.FAVORITO_MEDICAMENTO" FromRole="FAVORITO" ToRole="MEDICAMENTO" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.FAVORITO_USUARIO" FromRole="FAVORITO" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="FORMA_USO">
+          <Key>
+            <PropertyRef Name="ID_FOR" />
+          </Key>
+          <Property Name="ID_FOR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DES_FOR" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="MEDICAMENTO" Relationship="Self.MEDICAMENTO_FORMA_USO" FromRole="FORMA_USO" ToRole="MEDICAMENTO" />
+        </EntityType>
+        <EntityType Name="LABORATORIO">
+          <Key>
+            <PropertyRef Name="ID_LAB" />
+          </Key>
+          <Property Name="ID_LAB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_LAB" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RSO_LAB" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LABORATORIO_MEDICAMENTO" Relationship="Self.LABORATORIO_MEDICAMENTO_LABORATORIO" FromRole="LABORATORIO" ToRole="LABORATORIO_MEDICAMENTO" />
+        </EntityType>
+        <EntityType Name="LABORATORIO_MEDICAMENTO">
+          <Key>
+            <PropertyRef Name="ID_LABMED" />
+          </Key>
+          <Property Name="ID_LABMED" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="LABORATORIO" Relationship="Self.LABORATORIO_MEDICAMENTO_LABORATORIO" FromRole="LABORATORIO_MEDICAMENTO" ToRole="LABORATORIO" />
+          <NavigationProperty Name="MEDICAMENTO" Relationship="Self.LABORATORIO_MEDICAMENTO_MEDICAMENTO" FromRole="LABORATORIO_MEDICAMENTO" ToRole="MEDICAMENTO" />
+        </EntityType>
+        <EntityType Name="MEDICAMENTO">
+          <Key>
+            <PropertyRef Name="ID_MED" />
+          </Key>
+          <Property Name="ID_MED" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_MED" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ADVERTENCIA" Relationship="Self.MEDICAMENTO_ADVERTENCIA" FromRole="MEDICAMENTO" ToRole="ADVERTENCIA" />
+          <NavigationProperty Name="FAVORITO" Relationship="Self.FAVORITO_MEDICAMENTO" FromRole="MEDICAMENTO" ToRole="FAVORITO" />
+          <NavigationProperty Name="FORMA_USO" Relationship="Self.MEDICAMENTO_FORMA_USO" FromRole="MEDICAMENTO" ToRole="FORMA_USO" />
+          <NavigationProperty Name="LABORATORIO_MEDICAMENTO" Relationship="Self.LABORATORIO_MEDICAMENTO_MEDICAMENTO" FromRole="MEDICAMENTO" ToRole="LABORATORIO_MEDICAMENTO" />
+          <NavigationProperty Name="MEDICAMENTO_FARMACIA" Relationship="Self.MEDICAMENTO_FARMACIA_MEDICAMENTO" FromRole="MEDICAMENTO" ToRole="MEDICAMENTO_FARMACIA" />
+          <NavigationProperty Name="MEDICAMENTO_SINTOMA" Relationship="Self.MEDICAMENTO_SINTOMA_MEDICAMENTO" FromRole="MEDICAMENTO" ToRole="MEDICAMENTO_SINTOMA" />
+          <NavigationProperty Name="PROMOCION" Relationship="Self.PROMOCION_MEDICAMENTO" FromRole="MEDICAMENTO" ToRole="PROMOCION" />
+        </EntityType>
+        <EntityType Name="MEDICAMENTO_FARMACIA">
+          <Key>
+            <PropertyRef Name="ID_MEDFAR" />
+          </Key>
+          <Property Name="ID_MEDFAR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PRECIO" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <NavigationProperty Name="FARMACIA" Relationship="Self.MEDICAMENTO_FARMACIA_FARMACIA" FromRole="MEDICAMENTO_FARMACIA" ToRole="FARMACIA" />
+          <NavigationProperty Name="MEDICAMENTO" Relationship="Self.MEDICAMENTO_FARMACIA_MEDICAMENTO" FromRole="MEDICAMENTO_FARMACIA" ToRole="MEDICAMENTO" />
+        </EntityType>
+        <EntityType Name="MEDICAMENTO_SINTOMA">
+          <Key>
+            <PropertyRef Name="ID_MEDSIN" />
+          </Key>
+          <Property Name="ID_MEDSIN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="MEDICAMENTO" Relationship="Self.MEDICAMENTO_SINTOMA_MEDICAMENTO" FromRole="MEDICAMENTO_SINTOMA" ToRole="MEDICAMENTO" />
+          <NavigationProperty Name="SINTOMA" Relationship="Self.MEDICAMENTO_SINTOMA_SINTOMA" FromRole="MEDICAMENTO_SINTOMA" ToRole="SINTOMA" />
+        </EntityType>
+        <EntityType Name="PERSONA">
+          <Key>
+            <PropertyRef Name="PER_ID" />
+          </Key>
+          <Property Name="PER_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_PER" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="APEP_PER" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="APEM_PER" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FNAC_PER" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.PERSONA_USUARIO" FromRole="PERSONA" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="PROMOCION">
+          <Key>
+            <PropertyRef Name="ID_PRO" />
+            <PropertyRef Name="ID_MED" />
+            <PropertyRef Name="ID_FAR" />
+          </Key>
+          <Property Name="ID_PRO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_MED" Type="Int32" Nullable="false" />
+          <Property Name="ID_FAR" Type="Int32" Nullable="false" />
+          <Property Name="DES_PRO" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="FARMACIA" Relationship="Self.PROMOCION_FARMACIA" FromRole="PROMOCION" ToRole="FARMACIA" />
+          <NavigationProperty Name="MEDICAMENTO" Relationship="Self.PROMOCION_MEDICAMENTO" FromRole="PROMOCION" ToRole="MEDICAMENTO" />
+        </EntityType>
+        <EntityType Name="PROVINCIA">
+          <Key>
+            <PropertyRef Name="ID_PRO" />
+          </Key>
+          <Property Name="ID_PRO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DES_PRO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="DEPARTAMENTO" Relationship="Self.PROVINCIA_DEPARTAMENTO" FromRole="PROVINCIA" ToRole="DEPARTAMENTO" />
+          <NavigationProperty Name="DISTRITO" Relationship="Self.DISTRITO_PROVINCIA" FromRole="PROVINCIA" ToRole="DISTRITO" />
+        </EntityType>
+        <EntityType Name="SINTOMA">
+          <Key>
+            <PropertyRef Name="ID_SIN" />
+          </Key>
+          <Property Name="ID_SIN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DES_SIN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="MEDICAMENTO_SINTOMA" Relationship="Self.MEDICAMENTO_SINTOMA_SINTOMA" FromRole="SINTOMA" ToRole="MEDICAMENTO_SINTOMA" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="ID_USU" />
+          </Key>
+          <Property Name="ID_USU" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_USU" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PASS_USU" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CORREO_USU" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="FAVORITO" Relationship="Self.FAVORITO_USUARIO" FromRole="USUARIO" ToRole="FAVORITO" />
+          <NavigationProperty Name="PERSONA" Relationship="Self.PERSONA_USUARIO" FromRole="USUARIO" ToRole="PERSONA" />
+        </EntityType>
+        <Association Name="MEDICAMENTO_ADVERTENCIA">
+          <End Role="ADVERTENCIA" Type="Self.ADVERTENCIA" Multiplicity="1" />
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="*" />
+        </Association>
+        <Association Name="PROVINCIA_DEPARTAMENTO">
+          <End Role="DEPARTAMENTO" Type="Self.DEPARTAMENTO" Multiplicity="1" />
+          <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="*" />
+        </Association>
+        <Association Name="DISTRITO_PROVINCIA">
+          <End Role="PROVINCIA" Type="Self.PROVINCIA" Multiplicity="1" />
+          <End Role="DISTRITO" Type="Self.DISTRITO" Multiplicity="*" />
+        </Association>
+        <Association Name="FARMACIA_DISTRITO">
+          <End Role="DISTRITO" Type="Self.DISTRITO" Multiplicity="1" />
+          <End Role="FARMACIA" Type="Self.FARMACIA" Multiplicity="*" />
+        </Association>
+        <Association Name="MEDICAMENTO_FARMACIA_FARMACIA">
+          <End Role="FARMACIA" Type="Self.FARMACIA" Multiplicity="1" />
+          <End Role="MEDICAMENTO_FARMACIA" Type="Self.MEDICAMENTO_FARMACIA" Multiplicity="*" />
+        </Association>
+        <Association Name="PROMOCION_FARMACIA">
+          <End Role="FARMACIA" Type="Self.FARMACIA" Multiplicity="1" />
+          <End Role="PROMOCION" Type="Self.PROMOCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FARMACIA">
+              <PropertyRef Name="ID_FAR" />
+            </Principal>
+            <Dependent Role="PROMOCION">
+              <PropertyRef Name="ID_FAR" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FAVORITO_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="FAVORITO" Type="Self.FAVORITO" Multiplicity="*" />
+        </Association>
+        <Association Name="FAVORITO_USUARIO">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="FAVORITO" Type="Self.FAVORITO" Multiplicity="*" />
+        </Association>
+        <Association Name="MEDICAMENTO_FORMA_USO">
+          <End Role="FORMA_USO" Type="Self.FORMA_USO" Multiplicity="1" />
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="*" />
+        </Association>
+        <Association Name="LABORATORIO_MEDICAMENTO_LABORATORIO">
+          <End Role="LABORATORIO" Type="Self.LABORATORIO" Multiplicity="1" />
+          <End Role="LABORATORIO_MEDICAMENTO" Type="Self.LABORATORIO_MEDICAMENTO" Multiplicity="*" />
+        </Association>
+        <Association Name="LABORATORIO_MEDICAMENTO_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="LABORATORIO_MEDICAMENTO" Type="Self.LABORATORIO_MEDICAMENTO" Multiplicity="*" />
+        </Association>
+        <Association Name="MEDICAMENTO_FARMACIA_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="MEDICAMENTO_FARMACIA" Type="Self.MEDICAMENTO_FARMACIA" Multiplicity="*" />
+        </Association>
+        <Association Name="MEDICAMENTO_SINTOMA_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="MEDICAMENTO_SINTOMA" Type="Self.MEDICAMENTO_SINTOMA" Multiplicity="*" />
+        </Association>
+        <Association Name="PROMOCION_MEDICAMENTO">
+          <End Role="MEDICAMENTO" Type="Self.MEDICAMENTO" Multiplicity="1" />
+          <End Role="PROMOCION" Type="Self.PROMOCION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MEDICAMENTO">
+              <PropertyRef Name="ID_MED" />
+            </Principal>
+            <Dependent Role="PROMOCION">
+              <PropertyRef Name="ID_MED" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MEDICAMENTO_SINTOMA_SINTOMA">
+          <End Role="SINTOMA" Type="Self.SINTOMA" Multiplicity="1" />
+          <End Role="MEDICAMENTO_SINTOMA" Type="Self.MEDICAMENTO_SINTOMA" Multiplicity="*" />
+        </Association>
+        <Association Name="PERSONA_USUARIO">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="PERSONA" Type="Self.PERSONA" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="BD_FARMACIAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ADVERTENCIA" EntityType="Self.ADVERTENCIA" />
+          <EntitySet Name="DEPARTAMENTO" EntityType="Self.DEPARTAMENTO" />
+          <EntitySet Name="DISTRITO" EntityType="Self.DISTRITO" />
+          <EntitySet Name="FARMACIA" EntityType="Self.FARMACIA" />
+          <EntitySet Name="FAVORITO" EntityType="Self.FAVORITO" />
+          <EntitySet Name="FORMA_USO" EntityType="Self.FORMA_USO" />
+          <EntitySet Name="LABORATORIO" EntityType="Self.LABORATORIO" />
+          <EntitySet Name="LABORATORIO_MEDICAMENTO" EntityType="Self.LABORATORIO_MEDICAMENTO" />
+          <EntitySet Name="MEDICAMENTO" EntityType="Self.MEDICAMENTO" />
+          <EntitySet Name="MEDICAMENTO_FARMACIA" EntityType="Self.MEDICAMENTO_FARMACIA" />
+          <EntitySet Name="MEDICAMENTO_SINTOMA" EntityType="Self.MEDICAMENTO_SINTOMA" />
+          <EntitySet Name="PERSONA" EntityType="Self.PERSONA" />
+          <EntitySet Name="PROMOCION" EntityType="Self.PROMOCION" />
+          <EntitySet Name="PROVINCIA" EntityType="Self.PROVINCIA" />
+          <EntitySet Name="SINTOMA" EntityType="Self.SINTOMA" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+          <AssociationSet Name="MEDICAMENTO_ADVERTENCIA" Association="Self.MEDICAMENTO_ADVERTENCIA">
+            <End Role="ADVERTENCIA" EntitySet="ADVERTENCIA" />
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="PROVINCIA_DEPARTAMENTO" Association="Self.PROVINCIA_DEPARTAMENTO">
+            <End Role="DEPARTAMENTO" EntitySet="DEPARTAMENTO" />
+            <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+          </AssociationSet>
+          <AssociationSet Name="DISTRITO_PROVINCIA" Association="Self.DISTRITO_PROVINCIA">
+            <End Role="PROVINCIA" EntitySet="PROVINCIA" />
+            <End Role="DISTRITO" EntitySet="DISTRITO" />
+          </AssociationSet>
+          <AssociationSet Name="FARMACIA_DISTRITO" Association="Self.FARMACIA_DISTRITO">
+            <End Role="DISTRITO" EntitySet="DISTRITO" />
+            <End Role="FARMACIA" EntitySet="FARMACIA" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_FARMACIA_FARMACIA" Association="Self.MEDICAMENTO_FARMACIA_FARMACIA">
+            <End Role="FARMACIA" EntitySet="FARMACIA" />
+            <End Role="MEDICAMENTO_FARMACIA" EntitySet="MEDICAMENTO_FARMACIA" />
+          </AssociationSet>
+          <AssociationSet Name="PROMOCION_FARMACIA" Association="Self.PROMOCION_FARMACIA">
+            <End Role="FARMACIA" EntitySet="FARMACIA" />
+            <End Role="PROMOCION" EntitySet="PROMOCION" />
+          </AssociationSet>
+          <AssociationSet Name="FAVORITO_MEDICAMENTO" Association="Self.FAVORITO_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="FAVORITO" EntitySet="FAVORITO" />
+          </AssociationSet>
+          <AssociationSet Name="FAVORITO_USUARIO" Association="Self.FAVORITO_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="FAVORITO" EntitySet="FAVORITO" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_FORMA_USO" Association="Self.MEDICAMENTO_FORMA_USO">
+            <End Role="FORMA_USO" EntitySet="FORMA_USO" />
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="LABORATORIO_MEDICAMENTO_LABORATORIO" Association="Self.LABORATORIO_MEDICAMENTO_LABORATORIO">
+            <End Role="LABORATORIO" EntitySet="LABORATORIO" />
+            <End Role="LABORATORIO_MEDICAMENTO" EntitySet="LABORATORIO_MEDICAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="LABORATORIO_MEDICAMENTO_MEDICAMENTO" Association="Self.LABORATORIO_MEDICAMENTO_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="LABORATORIO_MEDICAMENTO" EntitySet="LABORATORIO_MEDICAMENTO" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_FARMACIA_MEDICAMENTO" Association="Self.MEDICAMENTO_FARMACIA_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="MEDICAMENTO_FARMACIA" EntitySet="MEDICAMENTO_FARMACIA" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_SINTOMA_MEDICAMENTO" Association="Self.MEDICAMENTO_SINTOMA_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="MEDICAMENTO_SINTOMA" EntitySet="MEDICAMENTO_SINTOMA" />
+          </AssociationSet>
+          <AssociationSet Name="PROMOCION_MEDICAMENTO" Association="Self.PROMOCION_MEDICAMENTO">
+            <End Role="MEDICAMENTO" EntitySet="MEDICAMENTO" />
+            <End Role="PROMOCION" EntitySet="PROMOCION" />
+          </AssociationSet>
+          <AssociationSet Name="MEDICAMENTO_SINTOMA_SINTOMA" Association="Self.MEDICAMENTO_SINTOMA_SINTOMA">
+            <End Role="SINTOMA" EntitySet="SINTOMA" />
+            <End Role="MEDICAMENTO_SINTOMA" EntitySet="MEDICAMENTO_SINTOMA" />
+          </AssociationSet>
+          <AssociationSet Name="PERSONA_USUARIO" Association="Self.PERSONA_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="PERSONA" EntitySet="PERSONA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BD_FARMACIAModelStoreContainer" CdmEntityContainer="BD_FARMACIAEntities">
+          <EntitySetMapping Name="ADVERTENCIA">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.ADVERTENCIA">
+              <MappingFragment StoreEntitySet="ADVERTENCIA">
+                <ScalarProperty Name="ID_ADV" ColumnName="ID_ADV" />
+                <ScalarProperty Name="DES_ADV" ColumnName="DES_ADV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DEPARTAMENTO">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.DEPARTAMENTO">
+              <MappingFragment StoreEntitySet="DEPARTAMENTO">
+                <ScalarProperty Name="ID_DEP" ColumnName="ID_DEP" />
+                <ScalarProperty Name="DES_DEP" ColumnName="DES_DEP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DISTRITO">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.DISTRITO">
+              <MappingFragment StoreEntitySet="DISTRITO">
+                <ScalarProperty Name="ID_DIS" ColumnName="ID_DIS" />
+                <ScalarProperty Name="DES_DIS" ColumnName="DES_DIS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FARMACIA">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.FARMACIA">
+              <MappingFragment StoreEntitySet="FARMACIA">
+                <ScalarProperty Name="ID_FAR" ColumnName="ID_FAR" />
+                <ScalarProperty Name="NOM_FAR" ColumnName="NOM_FAR" />
+                <ScalarProperty Name="DIR_FAR" ColumnName="DIR_FAR" />
+                <ScalarProperty Name="CORX_FAR" ColumnName="CORX_FAR" />
+                <ScalarProperty Name="CORDY_FAR" ColumnName="CORDY_FAR" />
+                <ScalarProperty Name="HORARIO_FAR" ColumnName="HORARIO_FAR" />
+                <ScalarProperty Name="GEO_LUGAR" ColumnName="GEO_LUGAR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FAVORITO">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.FAVORITO">
+              <MappingFragment StoreEntitySet="FAVORITO">
+                <ScalarProperty Name="ID_FAV" ColumnName="ID_FAV" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FORMA_USO">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.FORMA_USO">
+              <MappingFragment StoreEntitySet="FORMA_USO">
+                <ScalarProperty Name="ID_FOR" ColumnName="ID_FOR" />
+                <ScalarProperty Name="DES_FOR" ColumnName="DES_FOR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LABORATORIO">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.LABORATORIO">
+              <MappingFragment StoreEntitySet="LABORATORIO">
+                <ScalarProperty Name="ID_LAB" ColumnName="ID_LAB" />
+                <ScalarProperty Name="NOM_LAB" ColumnName="NOM_LAB" />
+                <ScalarProperty Name="RSO_LAB" ColumnName="RSO_LAB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LABORATORIO_MEDICAMENTO">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.LABORATORIO_MEDICAMENTO">
+              <MappingFragment StoreEntitySet="LABORATORIO_MEDICAMENTO">
+                <ScalarProperty Name="ID_LABMED" ColumnName="ID_LABMED" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MEDICAMENTO">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.MEDICAMENTO">
+              <MappingFragment StoreEntitySet="MEDICAMENTO">
+                <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+                <ScalarProperty Name="NOM_MED" ColumnName="NOM_MED" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MEDICAMENTO_FARMACIA">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.MEDICAMENTO_FARMACIA">
+              <MappingFragment StoreEntitySet="MEDICAMENTO_FARMACIA">
+                <ScalarProperty Name="ID_MEDFAR" ColumnName="ID_MEDFAR" />
+                <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MEDICAMENTO_SINTOMA">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.MEDICAMENTO_SINTOMA">
+              <MappingFragment StoreEntitySet="MEDICAMENTO_SINTOMA">
+                <ScalarProperty Name="ID_MEDSIN" ColumnName="ID_MEDSIN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PERSONA">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.PERSONA">
+              <MappingFragment StoreEntitySet="PERSONA">
+                <ScalarProperty Name="PER_ID" ColumnName="PER_ID" />
+                <ScalarProperty Name="NOM_PER" ColumnName="NOM_PER" />
+                <ScalarProperty Name="APEP_PER" ColumnName="APEP_PER" />
+                <ScalarProperty Name="APEM_PER" ColumnName="APEM_PER" />
+                <ScalarProperty Name="FNAC_PER" ColumnName="FNAC_PER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROMOCION">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.PROMOCION">
+              <MappingFragment StoreEntitySet="PROMOCION">
+                <ScalarProperty Name="ID_PRO" ColumnName="ID_PRO" />
+                <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+                <ScalarProperty Name="ID_FAR" ColumnName="ID_FAR" />
+                <ScalarProperty Name="DES_PRO" ColumnName="DES_PRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PROVINCIA">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.PROVINCIA">
+              <MappingFragment StoreEntitySet="PROVINCIA">
+                <ScalarProperty Name="ID_PRO" ColumnName="ID_PRO" />
+                <ScalarProperty Name="DES_PRO" ColumnName="DES_PRO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINTOMA">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.SINTOMA">
+              <MappingFragment StoreEntitySet="SINTOMA">
+                <ScalarProperty Name="ID_SIN" ColumnName="ID_SIN" />
+                <ScalarProperty Name="DES_SIN" ColumnName="DES_SIN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIO">
+            <EntityTypeMapping TypeName="BD_FARMACIAModel.USUARIO">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="ID_USU" ColumnName="ID_USU" />
+                <ScalarProperty Name="NOM_USU" ColumnName="NOM_USU" />
+                <ScalarProperty Name="PASS_USU" ColumnName="PASS_USU" />
+                <ScalarProperty Name="CORREO_USU" ColumnName="CORREO_USU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MEDICAMENTO_ADVERTENCIA" TypeName="BD_FARMACIAModel.MEDICAMENTO_ADVERTENCIA" StoreEntitySet="MEDICAMENTO">
+            <EndProperty Name="ADVERTENCIA">
+              <ScalarProperty Name="ID_ADV" ColumnName="ID_ADV" />
+            </EndProperty>
+            <EndProperty Name="MEDICAMENTO">
+              <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="PROVINCIA_DEPARTAMENTO" TypeName="BD_FARMACIAModel.PROVINCIA_DEPARTAMENTO" StoreEntitySet="PROVINCIA">
+            <EndProperty Name="DEPARTAMENTO">
+              <ScalarProperty Name="ID_DEP" ColumnName="ID_DEP" />
+            </EndProperty>
+            <EndProperty Name="PROVINCIA">
+              <ScalarProperty Name="ID_PRO" ColumnName="ID_PRO" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="DISTRITO_PROVINCIA" TypeName="BD_FARMACIAModel.DISTRITO_PROVINCIA" StoreEntitySet="DISTRITO">
+            <EndProperty Name="PROVINCIA">
+              <ScalarProperty Name="ID_PRO" ColumnName="ID_PRO" />
+            </EndProperty>
+            <EndProperty Name="DISTRITO">
+              <ScalarProperty Name="ID_DIS" ColumnName="ID_DIS" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FARMACIA_DISTRITO" TypeName="BD_FARMACIAModel.FARMACIA_DISTRITO" StoreEntitySet="FARMACIA">
+            <EndProperty Name="DISTRITO">
+              <ScalarProperty Name="ID_DIS" ColumnName="ID_DIS" />
+            </EndProperty>
+            <EndProperty Name="FARMACIA">
+              <ScalarProperty Name="ID_FAR" ColumnName="ID_FAR" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="MEDICAMENTO_FARMACIA_FARMACIA" TypeName="BD_FARMACIAModel.MEDICAMENTO_FARMACIA_FARMACIA" StoreEntitySet="MEDICAMENTO_FARMACIA">
+            <EndProperty Name="FARMACIA">
+              <ScalarProperty Name="ID_FAR" ColumnName="ID_FAR" />
+            </EndProperty>
+            <EndProperty Name="MEDICAMENTO_FARMACIA">
+              <ScalarProperty Name="ID_MEDFAR" ColumnName="ID_MEDFAR" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FAVORITO_MEDICAMENTO" TypeName="BD_FARMACIAModel.FAVORITO_MEDICAMENTO" StoreEntitySet="FAVORITO">
+            <EndProperty Name="MEDICAMENTO">
+              <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+            </EndProperty>
+            <EndProperty Name="FAVORITO">
+              <ScalarProperty Name="ID_FAV" ColumnName="ID_FAV" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="FAVORITO_USUARIO" TypeName="BD_FARMACIAModel.FAVORITO_USUARIO" StoreEntitySet="FAVORITO">
+            <EndProperty Name="USUARIO">
+              <ScalarProperty Name="ID_USU" ColumnName="ID_USU" />
+            </EndProperty>
+            <EndProperty Name="FAVORITO">
+              <ScalarProperty Name="ID_FAV" ColumnName="ID_FAV" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="MEDICAMENTO_FORMA_USO" TypeName="BD_FARMACIAModel.MEDICAMENTO_FORMA_USO" StoreEntitySet="MEDICAMENTO">
+            <EndProperty Name="FORMA_USO">
+              <ScalarProperty Name="ID_FOR" ColumnName="ID_FOR" />
+            </EndProperty>
+            <EndProperty Name="MEDICAMENTO">
+              <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="LABORATORIO_MEDICAMENTO_LABORATORIO" TypeName="BD_FARMACIAModel.LABORATORIO_MEDICAMENTO_LABORATORIO" StoreEntitySet="LABORATORIO_MEDICAMENTO">
+            <EndProperty Name="LABORATORIO">
+              <ScalarProperty Name="ID_LAB" ColumnName="ID_LAB" />
+            </EndProperty>
+            <EndProperty Name="LABORATORIO_MEDICAMENTO">
+              <ScalarProperty Name="ID_LABMED" ColumnName="ID_LABMED" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="LABORATORIO_MEDICAMENTO_MEDICAMENTO" TypeName="BD_FARMACIAModel.LABORATORIO_MEDICAMENTO_MEDICAMENTO" StoreEntitySet="LABORATORIO_MEDICAMENTO">
+            <EndProperty Name="MEDICAMENTO">
+              <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+            </EndProperty>
+            <EndProperty Name="LABORATORIO_MEDICAMENTO">
+              <ScalarProperty Name="ID_LABMED" ColumnName="ID_LABMED" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="MEDICAMENTO_FARMACIA_MEDICAMENTO" TypeName="BD_FARMACIAModel.MEDICAMENTO_FARMACIA_MEDICAMENTO" StoreEntitySet="MEDICAMENTO_FARMACIA">
+            <EndProperty Name="MEDICAMENTO">
+              <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+            </EndProperty>
+            <EndProperty Name="MEDICAMENTO_FARMACIA">
+              <ScalarProperty Name="ID_MEDFAR" ColumnName="ID_MEDFAR" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="MEDICAMENTO_SINTOMA_MEDICAMENTO" TypeName="BD_FARMACIAModel.MEDICAMENTO_SINTOMA_MEDICAMENTO" StoreEntitySet="MEDICAMENTO_SINTOMA">
+            <EndProperty Name="MEDICAMENTO">
+              <ScalarProperty Name="ID_MED" ColumnName="ID_MED" />
+            </EndProperty>
+            <EndProperty Name="MEDICAMENTO_SINTOMA">
+              <ScalarProperty Name="ID_MEDSIN" ColumnName="ID_MEDSIN" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="MEDICAMENTO_SINTOMA_SINTOMA" TypeName="BD_FARMACIAModel.MEDICAMENTO_SINTOMA_SINTOMA" StoreEntitySet="MEDICAMENTO_SINTOMA">
+            <EndProperty Name="SINTOMA">
+              <ScalarProperty Name="ID_SIN" ColumnName="ID_SIN" />
+            </EndProperty>
+            <EndProperty Name="MEDICAMENTO_SINTOMA">
+              <ScalarProperty Name="ID_MEDSIN" ColumnName="ID_MEDSIN" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="PERSONA_USUARIO" TypeName="BD_FARMACIAModel.PERSONA_USUARIO" StoreEntitySet="PERSONA">
+            <EndProperty Name="USUARIO">
+              <ScalarProperty Name="ID_USU" ColumnName="ID_USU" />
+            </EndProperty>
+            <EndProperty Name="PERSONA">
+              <ScalarProperty Name="PER_ID" ColumnName="PER_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

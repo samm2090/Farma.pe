@@ -13,7 +13,6 @@ c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe
 c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\AppManifest.xaml
 c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\Farma.pe_Debug_AnyCPU.xap
 c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\App.g.cs
-c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\MainPage.g.cs
 c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Farma.pe.g.resources
 c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Farma.pe.Resources.AppResources.resources
 c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Farma.pe.csproj.GenerateResource.Cache
@@ -83,3 +82,7 @@ c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe
 c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
 c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
 c:\users\iintegrazi eirl\documents\visual studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\Newtonsoft.Json.xml
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Farma.pe.csprojResolveAssemblyReference.cache
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Login.g.cs
