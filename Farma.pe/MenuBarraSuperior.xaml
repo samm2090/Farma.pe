@@ -1,15 +1,23 @@
-﻿<UserControl x:Class="Farma.pe.MenuBarraSuperior"
+﻿<UserControl
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit" x:Class="Farma.pe.MenuBarraSuperior"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
-    d:DesignHeight="480" d:DesignWidth="480">
-    
-    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneChromeBrush}">
+    Foreground="{StaticResource PhoneForegroundBrush}" d:DesignWidth="480" Height="66">
+
+    <Grid x:Name="LayoutRoot" Height="68" VerticalAlignment="Top" Background="#FF4A98BE">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="58" Margin="126,6,0,0" VerticalAlignment="Top" Width="200" Source="/imagenes/logo_pequeno.png"/>
+
+        <toolkit:ListPicker HorizontalAlignment="Left" Margin="10,-2,0,0" VerticalAlignment="Top" Width="50" RenderTransformOrigin="0.987,-0.514" BorderBrush="Transparent" Height="60">
+            <toolkit:ListPicker.Background>
+                <ImageBrush Stretch="Fill" ImageSource="/imagenes/BurgerMenu.png"/>
+            </toolkit:ListPicker.Background>
+            <toolkit:ListPickerItem x:Name="Opcion1" Content="Opcion1"></toolkit:ListPickerItem>
+        </toolkit:ListPicker>
 
     </Grid>
 </UserControl>

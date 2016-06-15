@@ -86,3 +86,6 @@ C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe
 C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\Newtonsoft.Json.xml
 C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Farma.pe.csprojResolveAssemblyReference.cache
 C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Login.g.cs
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\MenuBarraSuperior.g.cs
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\MenuPrincipal.g.cs
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\OpcionesInferior.g.cs
