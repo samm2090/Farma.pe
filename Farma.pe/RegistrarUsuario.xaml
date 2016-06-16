@@ -1,0 +1,41 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    x:Class="Farma.pe.RegistrarUsuario"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,10" Background="#FF4A98BE">
+            <Button x:Name="btnRegistrarse" Content="Registrarse" HorizontalAlignment="Left" Margin="128,612,0,0" VerticalAlignment="Top" Width="206" Click="btnRegistrarse_Click" />
+            <TextBlock x:Name="lblNombre" HorizontalAlignment="Left" Margin="48,28,0,0" TextWrapping="Wrap" Text="Nombre:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lblApePat" HorizontalAlignment="Left" Margin="48,132,0,0" TextWrapping="Wrap" Text="Apellido Paterno:" VerticalAlignment="Top" Height="35" Width="189"/>
+            <TextBlock x:Name="lblApeMat" HorizontalAlignment="Left" Margin="48,239,0,0" TextWrapping="Wrap" Text="Apellido Materno:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lblFecNac" HorizontalAlignment="Left" Margin="52,362,0,0" TextWrapping="Wrap" Text="Fecha Nacimiento:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lblCorreo" HorizontalAlignment="Left" Margin="61,466,0,0" TextWrapping="Wrap" Text="Correo:" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="72" Margin="52,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
+            <TextBox x:Name="txtApePat" HorizontalAlignment="Left" Height="72" Margin="52,167,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
+            <TextBox x:Name="txtApeMat" HorizontalAlignment="Left" Height="72" Margin="52,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
+            <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="72" Margin="48,500,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="374"/>
+
+            <toolkit:DatePicker x:Name="txtFecNac" HorizontalAlignment="Left" Margin="52,389,0,0" VerticalAlignment="Top" Width="250"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

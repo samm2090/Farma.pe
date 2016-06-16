@@ -19,14 +19,19 @@ namespace Farma.pe
             InitializeComponent();
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void btnIngresar_Click(object sender, RoutedEventArgs e)
         {
             validarUsuario();
         }
 
         private void validarUsuario()
         {
-            NavigationService.Navigate(new Uri("/MenuPrincipal.xalm",UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/MenuPrincipal.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void btnRegistrarte_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/RegistrarUsuario.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

@@ -89,3 +89,8 @@ C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe
 C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\MenuBarraSuperior.g.cs
 C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\MenuPrincipal.g.cs
 C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\OpcionesInferior.g.cs
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\BuscarFarmacias.g.cs
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\BuscarMedicamentos.g.cs
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\RegistrarUsuario.g.cs
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\VerFrecuentes.g.cs
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\VerPromociones.g.cs

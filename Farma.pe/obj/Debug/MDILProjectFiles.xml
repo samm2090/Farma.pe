@@ -15,9 +15,15 @@
     <File>Assets\Tiles\FlipCycleTileSmall.png</File>
     <File>Assets\Tiles\IconicTileMediumLarge.png</File>
     <File>Assets\Tiles\IconicTileSmall.png</File>
+    <File>Image1.png</File>
+    <File>imagenes\calendar.png</File>
+    <File>imagenes\list.png</File>
     <File>imagenes\logo.PNG</File>
     <File>imagenes\logo_pequeno.png</File>
     <File>imagenes\burgerMenu.png</File>
+    <File>imagenes\pharmacy.png</File>
+    <File>imagenes\pharmacy2.png</File>
+    <File>imagenes\pills.png</File>
     <File>README_FIRST.txt</File>
     <File>Toolkit.Content\ApplicationBar.Add.png</File>
     <File>Toolkit.Content\ApplicationBar.Cancel.png</File>

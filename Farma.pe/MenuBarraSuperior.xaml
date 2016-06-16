@@ -16,8 +16,8 @@
             <toolkit:ListPicker.Background>
                 <ImageBrush Stretch="Fill" ImageSource="/imagenes/BurgerMenu.png"/>
             </toolkit:ListPicker.Background>
-            <toolkit:ListPickerItem x:Name="Opcion1" Content="Opcion1"></toolkit:ListPickerItem>
+            <toolkit:ListPickerItem x:Name="Opcion1" Content="Opcion1"/>
         </toolkit:ListPicker>
-
+       
     </Grid>
 </UserControl>

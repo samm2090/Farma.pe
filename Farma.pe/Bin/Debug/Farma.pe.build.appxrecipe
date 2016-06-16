@@ -224,6 +224,15 @@
     <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Assets\Tiles\IconicTileSmall.png">
       <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Image1.png">
+      <PackagePath>Image1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\imagenes\calendar.png">
+      <PackagePath>imagenes\calendar.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\imagenes\list.png">
+      <PackagePath>imagenes\list.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\imagenes\logo.PNG">
       <PackagePath>imagenes\logo.PNG</PackagePath>
     </AppxPackagedFile>
@@ -232,6 +241,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\imagenes\burgerMenu.png">
       <PackagePath>imagenes\burgerMenu.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\imagenes\pharmacy.png">
+      <PackagePath>imagenes\pharmacy.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\imagenes\pharmacy2.png">
+      <PackagePath>imagenes\pharmacy2.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\imagenes\pills.png">
+      <PackagePath>imagenes\pills.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Toolkit.Content\ApplicationBar.Add.png">
       <PackagePath>Toolkit.Content\ApplicationBar.Add.png</PackagePath>

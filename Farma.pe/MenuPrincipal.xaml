@@ -21,22 +21,22 @@
         </Grid.RowDefinitions>
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,10" Background="#FFDDE4EC">
-            <Button x:Name="button"  HorizontalAlignment="Left" Margin="37,135,0,0" VerticalAlignment="Top" Width="176" FontFamily="Comic Sans MS" FontSize="30" BorderBrush="Black" Background="#FF4A98BE" Foreground="White" Height="159">
+            <Button x:Name="btnMedicamentos"  HorizontalAlignment="Left" Margin="37,156,0,0" VerticalAlignment="Top" Width="176" FontFamily="Comic Sans MS" FontSize="30" BorderBrush="Black" Background="#FF4A98BE" Foreground="White" Height="159" Click="btnMedicamentos_Click">
                 <Image x:Name="image" Height="100" Width="100" Source="/imagenes/pills.png"/>
             </Button>
-            <Button x:Name="button_Copy"  HorizontalAlignment="Left" Margin="241,135,0,0" VerticalAlignment="Top" Width="176" FontFamily="Comic Sans MS" FontSize="30" BorderBrush="Black" Background="#CC4A98BE" Foreground="White" Height="159">
+            <Button x:Name="btnFarmacias"  HorizontalAlignment="Left" Margin="241,156,0,0" VerticalAlignment="Top" Width="176" FontFamily="Comic Sans MS" FontSize="30" BorderBrush="Black" Background="#CC4A98BE" Foreground="White" Height="159" Click="btnFarmacias_Click">
                 <Image x:Name="image1" Height="100" Width="100" Source="/imagenes/pharmacy.png"/>
             </Button>
-            <Button x:Name="button_Copy1"  HorizontalAlignment="Left" Margin="37,376,0,0" VerticalAlignment="Top" Width="176" FontFamily="Comic Sans MS" FontSize="30" BorderBrush="Black" Background="#CC4A98BE" Foreground="White" Height="159">
+            <Button x:Name="btnFrecuentes"  HorizontalAlignment="Left" Margin="37,397,0,0" VerticalAlignment="Top" Width="176" FontFamily="Comic Sans MS" FontSize="30" BorderBrush="Black" Background="#CC4A98BE" Foreground="White" Height="159" Click="btnFrecuentes_Click">
                 <Image x:Name="image2" Height="100" Width="100" Source="/imagenes/list.png"/>
             </Button>
-            <Button x:Name="button_Copy2"  HorizontalAlignment="Left" Margin="241,376,0,0" VerticalAlignment="Top" Width="176" FontFamily="Comic Sans MS" FontSize="30" BorderBrush="Black" Background="#CC4A98BE" Foreground="White"  Height="159">
+            <Button x:Name="btnPromociones"  HorizontalAlignment="Left" Margin="241,397,0,0" VerticalAlignment="Top" Width="176" FontFamily="Comic Sans MS" FontSize="30" BorderBrush="Black" Background="#CC4A98BE" Foreground="White"  Height="159" Click="btnPromociones_Click">
                 <Image x:Name="image3" Height="100" Width="100" Source="/imagenes/calendar.png"/>
             </Button>
-            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="37,285,0,0" TextWrapping="Wrap" Text="Buscar Medicamentos" VerticalAlignment="Top" Width="173" Foreground="Black" FontFamily="Comic Sans MS" TextAlignment="Center" FontSize="22" FontWeight="Bold"/>
-            <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="255,285,0,0" TextWrapping="Wrap" Text="Buscar Farmacias" VerticalAlignment="Top" Width="162" Foreground="Black" FontFamily="Comic Sans MS" TextAlignment="Center" FontSize="22" FontWeight="Bold"/>
-            <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="19,526,0,0" TextWrapping="Wrap" Text="Lista Medicamentos Frecuentes" VerticalAlignment="Top" Width="222" Foreground="Black" FontFamily="Comic Sans MS" TextAlignment="Center" FontSize="22" FontWeight="Bold"/>
-            <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="241,526,0,0" TextWrapping="Wrap" Text="Calendario Promociones" VerticalAlignment="Top" Width="176" Foreground="Black" FontFamily="Comic Sans MS" TextAlignment="Center" FontSize="22" FontWeight="Bold"/>
+            <TextBlock x:Name="lblMedicamentos" HorizontalAlignment="Left" Margin="37,306,0,0" TextWrapping="Wrap" Text="Buscar Medicamentos" VerticalAlignment="Top" Width="173" Foreground="Black" FontFamily="Comic Sans MS" TextAlignment="Center" FontSize="22" FontWeight="Bold"/>
+            <TextBlock x:Name="lblFarmacias" HorizontalAlignment="Left" Margin="255,306,0,0" TextWrapping="Wrap" Text="Buscar Farmacias" VerticalAlignment="Top" Width="162" Foreground="Black" FontFamily="Comic Sans MS" TextAlignment="Center" FontSize="22" FontWeight="Bold"/>
+            <TextBlock x:Name="lblFrecuentes" HorizontalAlignment="Left" Margin="19,547,0,0" TextWrapping="Wrap" Text="Lista Medicamentos Frecuentes" VerticalAlignment="Top" Width="222" Foreground="Black" FontFamily="Comic Sans MS" TextAlignment="Center" FontSize="22" FontWeight="Bold"/>
+            <TextBlock x:Name="lblPromociones" HorizontalAlignment="Left" Margin="241,547,0,0" TextWrapping="Wrap" Text="Calendario Promociones" VerticalAlignment="Top" Width="176" Foreground="Black" FontFamily="Comic Sans MS" TextAlignment="Center" FontSize="22" FontWeight="Bold"/>
             <local:MenuBarraSuperior HorizontalAlignment="Left" VerticalAlignment="Top" Width="456"/>
         </Grid>
     </Grid>

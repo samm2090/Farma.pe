@@ -94,6 +94,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BuscarFarmacias.xaml.cs">
+      <DependentUpon>BuscarFarmacias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarMedicamentos.xaml.cs">
+      <DependentUpon>BuscarMedicamentos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -104,14 +110,25 @@
     <Compile Include="MenuPrincipal.xaml.cs">
       <DependentUpon>MenuPrincipal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="models\Persona.cs" />
+    <Compile Include="models\Usuario.cs" />
     <Compile Include="OpcionesInferior.xaml.cs">
       <DependentUpon>OpcionesInferior.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarUsuario.xaml.cs">
+      <DependentUpon>RegistrarUsuario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resources\AppResources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VerFrecuentes.xaml.cs">
+      <DependentUpon>VerFrecuentes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VerPromociones.xaml.cs">
+      <DependentUpon>VerPromociones.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +136,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="BuscarFarmacias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BuscarMedicamentos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -132,6 +157,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="OpcionesInferior.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegistrarUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerFrecuentes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VerPromociones.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -175,9 +212,15 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Image1.png" />
+    <Content Include="imagenes\calendar.png" />
+    <Content Include="imagenes\list.png" />
     <Content Include="imagenes\logo.PNG" />
     <Content Include="imagenes\logo_pequeno.png" />
     <Content Include="imagenes\burgerMenu.png" />
+    <Content Include="imagenes\pharmacy.png" />
+    <Content Include="imagenes\pharmacy2.png" />
+    <Content Include="imagenes\pills.png" />
     <Content Include="README_FIRST.txt" />
     <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
     <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
