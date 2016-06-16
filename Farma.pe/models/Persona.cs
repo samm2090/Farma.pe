@@ -14,6 +14,6 @@ namespace Farma.pe.models
         public string APEM_PER { get; set; }
         public Nullable<System.DateTime> FNAC_PER { get; set; }
 
-        public virtual USUARIO USUARIO { get; set; }
+        public virtual Usuario USUARIO { get; set; }
     }
 }

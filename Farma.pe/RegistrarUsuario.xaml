@@ -22,18 +22,20 @@
 
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,10" Background="#FF4A98BE">
-            <Button x:Name="btnRegistrarse" Content="Registrarse" HorizontalAlignment="Left" Margin="128,612,0,0" VerticalAlignment="Top" Width="206" Click="btnRegistrarse_Click" />
-            <TextBlock x:Name="lblNombre" HorizontalAlignment="Left" Margin="48,28,0,0" TextWrapping="Wrap" Text="Nombre:" VerticalAlignment="Top"/>
-            <TextBlock x:Name="lblApePat" HorizontalAlignment="Left" Margin="48,132,0,0" TextWrapping="Wrap" Text="Apellido Paterno:" VerticalAlignment="Top" Height="35" Width="189"/>
-            <TextBlock x:Name="lblApeMat" HorizontalAlignment="Left" Margin="48,239,0,0" TextWrapping="Wrap" Text="Apellido Materno:" VerticalAlignment="Top"/>
-            <TextBlock x:Name="lblFecNac" HorizontalAlignment="Left" Margin="52,362,0,0" TextWrapping="Wrap" Text="Fecha Nacimiento:" VerticalAlignment="Top"/>
-            <TextBlock x:Name="lblCorreo" HorizontalAlignment="Left" Margin="61,466,0,0" TextWrapping="Wrap" Text="Correo:" VerticalAlignment="Top"/>
-            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="72" Margin="52,55,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
-            <TextBox x:Name="txtApePat" HorizontalAlignment="Left" Height="72" Margin="52,167,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
-            <TextBox x:Name="txtApeMat" HorizontalAlignment="Left" Height="72" Margin="52,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
-            <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="72" Margin="48,500,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="374"/>
+            <Button x:Name="btnRegistrarse" Content="Registrarse" HorizontalAlignment="Left" Margin="128,676,0,0" VerticalAlignment="Top" Width="206" Click="btnRegistrarse_Click" />
+            <TextBlock x:Name="lblNombre" HorizontalAlignment="Left" Margin="48,10,0,0" TextWrapping="Wrap" Text="Nombre:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lblApePat" HorizontalAlignment="Left" Margin="48,114,0,0" TextWrapping="Wrap" Text="Apellido Paterno:" VerticalAlignment="Top" Height="35" Width="189"/>
+            <TextBlock x:Name="lblApeMat" HorizontalAlignment="Left" Margin="48,221,0,0" TextWrapping="Wrap" Text="Apellido Materno:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lblFecNac" HorizontalAlignment="Left" Margin="52,328,0,0" TextWrapping="Wrap" Text="Fecha Nacimiento:" VerticalAlignment="Top"/>
+            <TextBlock x:Name="lblCorreo" HorizontalAlignment="Left" Margin="61,432,0,0" TextWrapping="Wrap" Text="Correo:" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="72" Margin="52,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
+            <TextBox x:Name="txtApePat" HorizontalAlignment="Left" Height="72" Margin="52,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
+            <TextBox x:Name="txtApeMat" HorizontalAlignment="Left" Height="72" Margin="52,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="370"/>
+            <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="72" Margin="48,460,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="374"/>
 
-            <toolkit:DatePicker x:Name="txtFecNac" HorizontalAlignment="Left" Margin="52,389,0,0" VerticalAlignment="Top" Width="250"/>
+            <toolkit:DatePicker x:Name="txtFecNac" HorizontalAlignment="Left" Margin="52,355,0,0" VerticalAlignment="Top" Width="250"/>
+            <TextBlock x:Name="lblContrasena" HorizontalAlignment="Left" Margin="61,537,0,0" TextWrapping="Wrap" Text="Contraseña:" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtContrasena" HorizontalAlignment="Left" Height="72" Margin="48,564,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="374"/>
 
         </Grid>
     </Grid>
