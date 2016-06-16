@@ -93,3 +93,4 @@ C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe
 C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\ProjectArchitectures.txt
 C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\MDILProjectFiles.xml
 C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\XapCacheFile.xml
+C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Farma.pe.csprojResolveAssemblyReference.cache

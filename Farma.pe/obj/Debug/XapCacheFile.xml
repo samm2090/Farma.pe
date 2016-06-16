@@ -1,6 +1,6 @@
-﻿<xapCache source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\Farma.pe_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="6/15/2016 9:51:04 PM">
+﻿<xapCache source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\Farma.pe_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="6/15/2016 10:07:43 PM">
   <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\resources.pri" archivePath="resources.pri" lastWriteTime="6/15/2016 9:48:45 PM" />
-  <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Farma.pe.dll" archivePath="Farma.pe.dll" lastWriteTime="6/15/2016 9:51:00 PM" />
+  <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\Farma.pe.dll" archivePath="Farma.pe.dll" lastWriteTime="6/15/2016 10:07:35 PM" />
   <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="6/14/2016 10:50:58 PM" />
   <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Assets\BadgeLogo.png" archivePath="Assets\BadgeLogo.png" lastWriteTime="6/14/2016 10:50:58 PM" />
   <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Assets\Logo.png" archivePath="Assets\Logo.png" lastWriteTime="6/14/2016 10:50:58 PM" />
@@ -34,6 +34,6 @@
   <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\packages\Newtonsoft.Json.8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll" archivePath="Newtonsoft.Json.dll" lastWriteTime="3/14/2016 9:30:06 PM" />
   <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\packages\Newtonsoft.Json.8.0.3\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.xml" archivePath="Newtonsoft.Json.xml" lastWriteTime="3/14/2016 9:30:06 PM" />
   <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="6/15/2016 9:39:36 PM" />
-  <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="6/15/2016 9:51:04 PM" />
+  <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\obj\Debug\MDILProjectFiles.xml" archivePath="MDILProjectFiles.xml" lastWriteTime="6/15/2016 10:07:42 PM" />
   <file source="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Bin\Debug\AppxManifest.xml" archivePath="AppxManifest.xml" lastWriteTime="6/15/2016 9:48:45 PM" />
 </xapCache>
