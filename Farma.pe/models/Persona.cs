@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Farma.pe.models
 {
-    class Persona
+    public class Persona
     {
+        
         public int PER_ID { get; set; }
         public string NOM_PER { get; set; }
         public string APEP_PER { get; set; }

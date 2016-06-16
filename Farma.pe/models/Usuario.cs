@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Farma.pe.models
 {
-    class Usuario
+    public class Usuario
     {
         public int ID_USU { get; set; }
         public string NOM_USU { get; set; }

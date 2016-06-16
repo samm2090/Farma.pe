@@ -66,7 +66,7 @@ namespace Farma.pe
                     persona.APEP_PER = txtApePat.Text;
                     persona.APEM_PER = txtApeMat.Text;
                     persona.FNAC_PER = txtFecNac.Value;
-                    persona.USUARIO.ID_USU = usuario.ID_USU;
+                    persona.USUARIO = usuario;
 
                     string jsonData = JsonConvert.SerializeObject(persona);
 
@@ -93,12 +93,10 @@ namespace Farma.pe
             try
             {
 
-                Persona persona = JsonConvert.DeserializeObject<Persona>(e.Result);
+                //Persona persona = JsonConvert.DeserializeObject<Persona>(e.Result);
 
-                if (persona != null)
-                {
                     MessageBox.Show("¡Te haz registrado! Ingresa usando tu correo y contraseña");
-                }
+                //}
             }
             catch (Exception ex)
             {

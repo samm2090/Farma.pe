@@ -11,7 +11,7 @@ namespace WebAPI_Farma.pe.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class PERSONA
     {
         public int PER_ID { get; set; }
@@ -19,7 +19,8 @@ namespace WebAPI_Farma.pe.Models
         public string APEP_PER { get; set; }
         public string APEM_PER { get; set; }
         public Nullable<System.DateTime> FNAC_PER { get; set; }
-    
+
         public virtual USUARIO USUARIO { get; set; }
+
     }
 }

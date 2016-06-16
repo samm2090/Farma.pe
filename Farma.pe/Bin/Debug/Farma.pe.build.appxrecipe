@@ -224,9 +224,6 @@
     <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Assets\Tiles\IconicTileSmall.png">
       <PackagePath>Assets\Tiles\IconicTileSmall.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\Image1.png">
-      <PackagePath>Image1.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\IINTEGRAZI EIRL\Documents\Visual Studio 2015\Projects\Farma.pe\Farma.pe\imagenes\calendar.png">
       <PackagePath>imagenes\calendar.png</PackagePath>
     </AppxPackagedFile>

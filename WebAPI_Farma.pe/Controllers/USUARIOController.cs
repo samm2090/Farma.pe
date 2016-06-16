@@ -35,6 +35,19 @@ namespace WebAPI_Farma.pe.Controllers
             return Ok(uSUARIO);
         }
 
+        // GET: api/USUARIO/5
+        //[ResponseType(typeof(USUARIO))]
+        //public IHttpActionResult GetUSUARIOxNOMBRE(string nombre)
+        //{
+        //    USUARIO uSUARIO = db.USUARIO.Find(nombre);
+        //    if (uSUARIO == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return Ok(uSUARIO);
+        //}
+
         // PUT: api/USUARIO/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutUSUARIO(int id, USUARIO uSUARIO)

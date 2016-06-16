@@ -212,7 +212,6 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Image1.png" />
     <Content Include="imagenes\calendar.png" />
     <Content Include="imagenes\list.png" />
     <Content Include="imagenes\logo.PNG" />
