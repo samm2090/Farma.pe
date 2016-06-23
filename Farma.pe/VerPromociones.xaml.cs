@@ -15,6 +15,7 @@ namespace Farma.pe
         public VerPromociones()
         {
             InitializeComponent();
+            MessageBox.Show("NullPointerException : Error2220 deserlize.s");
         }
     }
 }

@@ -15,6 +15,8 @@ namespace WebAPI_Farma.pe.Models
     public partial class MEDICAMENTO_FARMACIA
     {
         public int ID_MEDFAR { get; set; }
+        public int ID_MED { get; set; }
+        public int ID_FAR { get; set; }
         public decimal PRECIO { get; set; }
     
         public virtual FARMACIA FARMACIA { get; set; }

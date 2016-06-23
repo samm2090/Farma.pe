@@ -234,80 +234,78 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FARMACIAController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MEDICAMENTOController.cs" />
-    <Compile Include="Controllers\PERSONAController.cs" />
     <Compile Include="Controllers\USUARIOController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountBindingModels.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ADVERTENCIA.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BD_FARMACIA.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_FARMACIA.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BD_FARMACIA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BD_FARMACIA.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD_FARMACIA.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\DEPARTAMENTO.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\DISTRITO.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FARMACIA.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\FarmaPe.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FarmaPe.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\FarmaPe.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FarmaPe.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\FarmaPe.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FarmaPe.edmx</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FAVORITO.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\FORMA_USO.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LABORATORIO.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LABORATORIO_MEDICAMENTO.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MEDICAMENTO.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MEDICAMENTO_FARMACIA.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MEDICAMENTO_SINTOMA.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PERSONA.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PROMOCION.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PROVINCIA.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\SINTOMA.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\USP_FARMACIAS_X_DISTRITO_Result.cs">
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\USUARIO.cs">
-      <DependentUpon>FarmaPe.tt</DependentUpon>
+      <DependentUpon>BD_FARMACIA.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -321,15 +319,15 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\FarmaPe.Context.tt">
+    <Content Include="Models\BD_FARMACIA.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FarmaPe.edmx</DependentUpon>
-      <LastGenOutput>FarmaPe.Context.cs</LastGenOutput>
+      <DependentUpon>BD_FARMACIA.edmx</DependentUpon>
+      <LastGenOutput>BD_FARMACIA.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\FarmaPe.tt">
+    <Content Include="Models\BD_FARMACIA.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>FarmaPe.edmx</DependentUpon>
-      <LastGenOutput>FarmaPe.cs</LastGenOutput>
+      <DependentUpon>BD_FARMACIA.edmx</DependentUpon>
+      <LastGenOutput>BD_FARMACIA.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -357,12 +355,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\FarmaPe.edmx">
+    <EntityDeploy Include="Models\BD_FARMACIA.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>FarmaPe.Designer.cs</LastGenOutput>
+      <LastGenOutput>BD_FARMACIA.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\FarmaPe.edmx.diagram">
-      <DependentUpon>FarmaPe.edmx</DependentUpon>
+    <Content Include="Models\BD_FARMACIA.edmx.diagram">
+      <DependentUpon>BD_FARMACIA.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

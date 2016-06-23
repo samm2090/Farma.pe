@@ -18,10 +18,11 @@ namespace WebAPI_Farma.pe.Models
         public FARMACIA()
         {
             this.MEDICAMENTO_FARMACIA = new HashSet<MEDICAMENTO_FARMACIA>();
-            this.PROMOCION = new HashSet<PROMOCION>();
+            this.PROMOCIONs = new HashSet<PROMOCION>();
         }
     
         public int ID_FAR { get; set; }
+        public int ID_DIS { get; set; }
         public string NOM_FAR { get; set; }
         public string DIR_FAR { get; set; }
         public Nullable<float> CORX_FAR { get; set; }
@@ -33,6 +34,6 @@ namespace WebAPI_Farma.pe.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MEDICAMENTO_FARMACIA> MEDICAMENTO_FARMACIA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PROMOCION> PROMOCION { get; set; }
+        public virtual ICollection<PROMOCION> PROMOCIONs { get; set; }
     }
 }

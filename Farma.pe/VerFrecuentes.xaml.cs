@@ -15,6 +15,7 @@ namespace Farma.pe
         public VerFrecuentes()
         {
             InitializeComponent();
+            MessageBox.Show("NullPointerException : Error2220 deserlize.s");
         }
     }
 }

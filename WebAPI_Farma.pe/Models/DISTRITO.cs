@@ -17,14 +17,15 @@ namespace WebAPI_Farma.pe.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DISTRITO()
         {
-            this.FARMACIA = new HashSet<FARMACIA>();
+            this.FARMACIAs = new HashSet<FARMACIA>();
         }
     
         public int ID_DIS { get; set; }
+        public int ID_PRO { get; set; }
         public string DES_DIS { get; set; }
     
         public virtual PROVINCIA PROVINCIA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FARMACIA> FARMACIA { get; set; }
+        public virtual ICollection<FARMACIA> FARMACIAs { get; set; }
     }
 }

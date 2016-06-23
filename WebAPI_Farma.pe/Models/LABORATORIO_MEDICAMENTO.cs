@@ -15,6 +15,8 @@ namespace WebAPI_Farma.pe.Models
     public partial class LABORATORIO_MEDICAMENTO
     {
         public int ID_LABMED { get; set; }
+        public int ID_LAB { get; set; }
+        public int ID_MED { get; set; }
     
         public virtual LABORATORIO LABORATORIO { get; set; }
         public virtual MEDICAMENTO MEDICAMENTO { get; set; }

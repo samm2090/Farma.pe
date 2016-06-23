@@ -17,16 +17,16 @@ namespace WebAPI_Farma.pe.Controllers
         private BD_FARMACIAEntities db = new BD_FARMACIAEntities();
 
         // GET: api/USUARIO
-        public IQueryable<USUARIO> GetUSUARIO()
+        public IQueryable<USUARIO> GetUSUARIOs()
         {
-            return db.USUARIO;
+            return db.USUARIOs;
         }
 
         // GET: api/USUARIO/5
         [ResponseType(typeof(USUARIO))]
         public IHttpActionResult GetUSUARIO(int id)
         {
-            USUARIO uSUARIO = db.USUARIO.Find(id);
+            USUARIO uSUARIO = db.USUARIOs.Find(id);
             if (uSUARIO == null)
             {
                 return NotFound();
@@ -34,19 +34,6 @@ namespace WebAPI_Farma.pe.Controllers
 
             return Ok(uSUARIO);
         }
-
-        // GET: api/USUARIO/5
-        //[ResponseType(typeof(USUARIO))]
-        //public IHttpActionResult GetUSUARIOxNOMBRE(string nombre)
-        //{
-        //    USUARIO uSUARIO = db.USUARIO.Find(nombre);
-        //    if (uSUARIO == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return Ok(uSUARIO);
-        //}
 
         // PUT: api/USUARIO/5
         [ResponseType(typeof(void))]
@@ -92,7 +79,7 @@ namespace WebAPI_Farma.pe.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.USUARIO.Add(uSUARIO);
+            db.USUARIOs.Add(uSUARIO);
             db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = uSUARIO.ID_USU }, uSUARIO);
@@ -102,13 +89,13 @@ namespace WebAPI_Farma.pe.Controllers
         [ResponseType(typeof(USUARIO))]
         public IHttpActionResult DeleteUSUARIO(int id)
         {
-            USUARIO uSUARIO = db.USUARIO.Find(id);
+            USUARIO uSUARIO = db.USUARIOs.Find(id);
             if (uSUARIO == null)
             {
                 return NotFound();
             }
 
-            db.USUARIO.Remove(uSUARIO);
+            db.USUARIOs.Remove(uSUARIO);
             db.SaveChanges();
 
             return Ok(uSUARIO);
@@ -125,7 +112,7 @@ namespace WebAPI_Farma.pe.Controllers
 
         private bool USUARIOExists(int id)
         {
-            return db.USUARIO.Count(e => e.ID_USU == id) > 0;
+            return db.USUARIOs.Count(e => e.ID_USU == id) > 0;
         }
     }
 }

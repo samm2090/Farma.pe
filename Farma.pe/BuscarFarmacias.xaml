@@ -21,6 +21,21 @@
 
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,10" Background="#FF4A98BE">
             <TextBlock Text="Buscar Farmacias"></TextBlock>
+            <Grid HorizontalAlignment="Left" Height="572" Margin="30,113,0,0" VerticalAlignment="Top" Width="402">
+
+                <ListBox x:Name="lbFarmacias" Height="200" Width="400" SelectionChanged="lbSC" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderThickness="2" BorderBrush="White">
+                            <StackPanel Orientation="Vertical" >
+                                <TextBlock Text="{Binding NOM_FAR}" Width="200" />
+                                <TextBlock Text="{Binding DIR_FAR}" Width="200" />
+                            </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
         </Grid>
     </Grid>
 

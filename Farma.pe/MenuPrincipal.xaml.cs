@@ -26,7 +26,6 @@ namespace Farma.pe
         private void btnFarmacias_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("/BuscarFarmacias.xaml", UriKind.RelativeOrAbsolute));
-
         }
 
         private void btnFrecuentes_Click(object sender, RoutedEventArgs e)

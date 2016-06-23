@@ -15,6 +15,8 @@ namespace WebAPI_Farma.pe.Models
     public partial class FAVORITO
     {
         public int ID_FAV { get; set; }
+        public int ID_MED { get; set; }
+        public int ID_USU { get; set; }
     
         public virtual MEDICAMENTO MEDICAMENTO { get; set; }
         public virtual USUARIO USUARIO { get; set; }

@@ -17,19 +17,21 @@ namespace WebAPI_Farma.pe.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MEDICAMENTO()
         {
-            this.FAVORITO = new HashSet<FAVORITO>();
+            this.FAVORITOes = new HashSet<FAVORITO>();
             this.LABORATORIO_MEDICAMENTO = new HashSet<LABORATORIO_MEDICAMENTO>();
             this.MEDICAMENTO_FARMACIA = new HashSet<MEDICAMENTO_FARMACIA>();
             this.MEDICAMENTO_SINTOMA = new HashSet<MEDICAMENTO_SINTOMA>();
-            this.PROMOCION = new HashSet<PROMOCION>();
+            this.PROMOCIONs = new HashSet<PROMOCION>();
         }
     
         public int ID_MED { get; set; }
+        public int ID_ADV { get; set; }
+        public int ID_FOR { get; set; }
         public string NOM_MED { get; set; }
     
         public virtual ADVERTENCIA ADVERTENCIA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FAVORITO> FAVORITO { get; set; }
+        public virtual ICollection<FAVORITO> FAVORITOes { get; set; }
         public virtual FORMA_USO FORMA_USO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LABORATORIO_MEDICAMENTO> LABORATORIO_MEDICAMENTO { get; set; }
@@ -38,6 +40,6 @@ namespace WebAPI_Farma.pe.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MEDICAMENTO_SINTOMA> MEDICAMENTO_SINTOMA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PROMOCION> PROMOCION { get; set; }
+        public virtual ICollection<PROMOCION> PROMOCIONs { get; set; }
     }
 }

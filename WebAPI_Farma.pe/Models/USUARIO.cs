@@ -17,8 +17,8 @@ namespace WebAPI_Farma.pe.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public USUARIO()
         {
-            this.FAVORITO = new HashSet<FAVORITO>();
-            this.PERSONA = new HashSet<PERSONA>();
+            this.FAVORITOes = new HashSet<FAVORITO>();
+            this.PERSONAs = new HashSet<PERSONA>();
         }
     
         public int ID_USU { get; set; }
@@ -27,8 +27,8 @@ namespace WebAPI_Farma.pe.Models
         public string CORREO_USU { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FAVORITO> FAVORITO { get; set; }
+        public virtual ICollection<FAVORITO> FAVORITOes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PERSONA> PERSONA { get; set; }
+        public virtual ICollection<PERSONA> PERSONAs { get; set; }
     }
 }

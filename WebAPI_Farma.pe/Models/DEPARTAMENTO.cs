@@ -17,13 +17,13 @@ namespace WebAPI_Farma.pe.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DEPARTAMENTO()
         {
-            this.PROVINCIA = new HashSet<PROVINCIA>();
+            this.PROVINCIAs = new HashSet<PROVINCIA>();
         }
     
         public int ID_DEP { get; set; }
         public string DES_DEP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PROVINCIA> PROVINCIA { get; set; }
+        public virtual ICollection<PROVINCIA> PROVINCIAs { get; set; }
     }
 }

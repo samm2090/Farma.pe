@@ -104,12 +104,17 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MapaFarmacia.xaml.cs">
+      <DependentUpon>MapaFarmacia.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MenuBarraSuperior.xaml.cs">
       <DependentUpon>MenuBarraSuperior.xaml</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.xaml.cs">
       <DependentUpon>MenuPrincipal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="models\Distrito.cs" />
+    <Compile Include="models\Farmacia.cs" />
     <Compile Include="models\Persona.cs" />
     <Compile Include="models\Usuario.cs" />
     <Compile Include="OpcionesInferior.xaml.cs">
@@ -145,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MapaFarmacia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
