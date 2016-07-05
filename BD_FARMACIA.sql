@@ -1,7 +1,13 @@
 -- Created by Vertabelo (http://vertabelo.com)
 -- Last modification date: 2016-06-15 01:46:19.775
+USE MASTER
+IF EXISTS (SELECT * FROM SYS.DATABASES WHERE NAME = 'BD_FARMACIA')
+DROP DATABASE BD_FARMACIA
+GO
+
 CREATE DATABASE BD_FARMACIA
 GO
+
 USE BD_FARMACIA
 GO
 -- tables
